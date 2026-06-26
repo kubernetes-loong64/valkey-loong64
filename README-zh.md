@@ -1,21 +1,28 @@
+# Valkey for LoongArch (loong64)
+
 <p align="center"><a href="README.md">English</a> | <a href="README-zh.md">中文</a></p>
 
-## 验证发布
+[Valkey](https://valkey.io/) Docker 容器镜像，移植到 **LoongArch (loong64)** 架构。
 
-- 发布文件使用 GPG 签名。
-- 从 [keys.openpgp.org](https://keys.openpgp.org) 下载公钥。
-- 指纹：[FCF8724722CCBF9F51B1FBE376532BE7E3013105](https://keys.openpgp.org/debug?q=FCF8724722CCBF9F51B1FBE376532BE7E3013105)
-- [手动下载](https://keys.openpgp.org/vks/v1/by-fingerprint/FCF8724722CCBF9F51B1FBE376532BE7E3013105)
+本仓库通过向上游 [valkey-io/valkey-container](https://github.com/valkey-io/valkey-container) 应用最小化补丁以支持替代基础镜像，
+构建并发布适用于 LoongArch 的 Valkey 容器镜像。
+
+## Docker 镜像
+
+镜像发布在 Docker Hub 上：
+[`kubernetesloong64/valkey-loong64`](https://hub.docker.com/r/kubernetesloong64/valkey-loong64)。
+
+- [![kubernetesloong64/valkey-loong64](https://img.shields.io/docker/v/kubernetesloong64/valkey-loong64?arch=loong64&logo=docker&label=kubernetesloong64%2Fvalkey-loong64&sort=semver)](https://hub.docker.com/r/kubernetesloong64/valkey-loong64/tags)
+
+每个版本提供两种基础镜像变体：
+
+- **debian** — 基于 `lcr.loongnix.cn/debian:14`
+- **debian-slim** — 基于 `lcr.loongnix.cn/debian:14-slim`
+
+### 拉取镜像
 
 ```shell
-gpg --keyserver keys.openpgp.org --recv-keys FCF8724722CCBF9F51B1FBE376532BE7E3013105
-echo "FCF8724722CCBF9F51B1FBE376532BE7E3013105:6:" | gpg --import-ownertrust
-```
-
-或者，手动下载公钥文件后导入：
-
-```shell
-gpg --import /tmp/xxx
+docker pull kubernetesloong64/valkey-loong64:9.1.0-debian-slim
 ```
 
 ## 许可证
