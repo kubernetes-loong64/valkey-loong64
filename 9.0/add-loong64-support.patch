@@ -1,0 +1,15 @@
+diff --git a/9.0/debian/Dockerfile b/9.0/debian/Dockerfile
+index 8279f0a..b5620a0 100644
+--- a/9.0/debian/Dockerfile
++++ b/9.0/debian/Dockerfile
+@@ -3,8 +3,8 @@
+ #
+ # PLEASE DO NOT EDIT IT DIRECTLY.
+ #
+-
+-FROM debian:trixie-slim AS base
++ARG BASE_IMAGE=debian:trixie-slim
++FROM $BASE_IMAGE AS base
+ 
+ FROM base AS build
+ 
