@@ -1,0 +1,15 @@
+diff --git a/8.1/debian/Dockerfile b/8.1/debian/Dockerfile
+index 7149415..1b7674c 100644
+--- a/8.1/debian/Dockerfile
++++ b/8.1/debian/Dockerfile
+@@ -3,8 +3,8 @@
+ #
+ # PLEASE DO NOT EDIT IT DIRECTLY.
+ #
+-
+-FROM debian:bookworm-slim
++ARG BASE_IMAGE=debian:bookworm-slim
++FROM $BASE_IMAGE
+ 
+ # add our user and group first to make sure their IDs get assigned consistently, regardless of whatever dependencies get added
+ RUN set -eux; \
