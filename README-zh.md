@@ -23,6 +23,8 @@
 
 ```shell
 docker pull kubernetesloong64/valkey-loong64:9.1.1-debian-slim
+docker pull kubernetesloong64/valkey-loong64:9.0.5-debian-slim
+docker pull kubernetesloong64/valkey-loong64:8.1.9-debian-slim
 ```
 
 ## 许可证
