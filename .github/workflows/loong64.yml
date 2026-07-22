@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       NAMESPACE: ${{ vars.NAMESPACE || 'kubernetesloong64' }}
-      VALKEY_REF: 097e9e09
+      VALKEY_REF: 2a88faed
     strategy:
       fail-fast: false
       matrix:
