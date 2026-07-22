@@ -22,7 +22,7 @@
 ### 拉取镜像
 
 ```shell
-docker pull kubernetesloong64/valkey-loong64:9.1.0-debian-slim
+docker pull kubernetesloong64/valkey-loong64:9.1.1-debian-slim
 ```
 
 ## 许可证

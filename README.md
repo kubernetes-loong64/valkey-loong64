@@ -22,7 +22,7 @@ Two base image variants are provided per version:
 ### Pull Images
 
 ```shell
-docker pull kubernetesloong64/valkey-loong64:9.1.0-debian-slim
+docker pull kubernetesloong64/valkey-loong64:9.1.1-debian-slim
 ```
 
 ## License
